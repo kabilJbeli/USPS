@@ -1,0 +1,21 @@
+.verify-payment-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.verify-payment-form input,::ng-deep .verify-payment-form p-dropdown{
+  width:49% !important;
+  min-height: 42px;
+}
+button{
+  max-height: 42px;
+
+}
+::ng-deep p-dropdown .p-dropdown {
+  width: 100%;
+}
+h2{
+  color: #333366;
+}

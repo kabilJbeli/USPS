@@ -1,0 +1,23 @@
+
+.main-section{
+
+  background:#f7f7f7;
+}
+::ng-deep p-steps .p-steps-item .p-menuitem-link{
+  background:transparent !important;
+  cursor:pointer;
+}
+.tracking-number{
+  color:#333366;
+}
+.tracking-number span{
+  color:#bdbdc2;
+  font-weight:normal;
+}
+
+::ng-deep p-steps .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus{
+  box-shadow:none !important;
+  -webkit-box-shadow:none !important;
+  -moz-box-shadow:none !important;
+  outline:none !important;
+}

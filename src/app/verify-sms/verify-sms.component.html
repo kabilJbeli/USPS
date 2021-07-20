@@ -1,0 +1,10 @@
+<section [formGroup]="parentForm" class="verify-sms-form pl-5 pr-5 mt-5" >
+  <h2>Verify Your Mobile Number</h2>
+  <p>To confirm the operation, enter the password we have sent to your mobile ******* </p>
+  <div class="d-flex justify-content-between">
+    <input type="text" placeholder="SMS KEY" autocomplete="off" class="mb-3" pInputText
+           formControlName="verifySms" />
+    <button class="regular-button" (click)="next()" [disabled]="!f.verifySms.value">Finish</button>
+  </div>
+</section>
+

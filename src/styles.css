@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  margin:0;
+  padding:0;
+}
+.regular-button{
+  background-color:#333366;
+  border:none;
+  outline:none;
+  min-width:150px;
+  color:#fff;
+  min-height:40px;
+}
+.regular-text{
+  font-size:21px;
+}
+
+.regular-paragraph{
+  font-size:16px;
+  margin: 0;
+}
+.warning{
+  color:red;
+  font-weight:bold;
+}
+.regular-button:disabled{
+  opacity:0.5;
+}

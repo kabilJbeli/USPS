@@ -1,0 +1,34 @@
+footer{
+  display:flex;
+  justify-content:space-around;
+  background:#f7f7f7;
+  flex-wrap:wrap;
+}
+
+footer ul{
+  list-style:none;
+  padding:0px;
+  margin:0;
+}
+
+footer ul li a{
+text-decoration:none;
+  color:#bdbdc2;
+}
+
+footer ul li{
+padding:4px;
+}
+
+footer ul li a:hover{
+  text-decoration:underline;
+}
+footer ul li b{
+  color:#333366;
+
+}
+@media only screen and (max-width: 991px) {
+  footer ul{
+    width:50% !important;
+  }
+}

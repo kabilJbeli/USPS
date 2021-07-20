@@ -1,0 +1,16 @@
+
+<section [formGroup]="parentForm" class="adress-form pl-5 pr-5 mt-5">
+
+  <input type="text" placeholder="Full Name" pInputText formControlName="fullName" class="mb-3"/>
+  <input type="text" placeholder="Street Adress2 (OPT)" pInputText formControlName="streetAddress1" class="mb-3"/>
+  <input type="text" placeholder="Street Adress1" pInputText formControlName="streetAddress2" class="mb-3"/>
+  <input type="text" placeholder="City" pInputText formControlName="city" class="mb-3"/>
+  <p-dropdown placeholder="Select State" [options]="cities" formControlName="state" optionLabel="name"></p-dropdown>
+
+  <input type="text" placeholder="Zip Code" pInputText formControlName="zipCode" class="mb-3"/>
+  <input type="tel" placeholder="Phone Number" pInputText formControlName="phoneNumber" class="mb-3 w-100"/>
+  <div class="w-100 pt-2 text-right">
+  <button class="regular-button" (click)="next()" [disabled]="!f.fullName.value || !f.streetAddress1.value  || !f.city.value || !f.state.value || !f.zipCode.value || !f.phoneNumber.value">Continue</button>
+  </div>
+
+</section>

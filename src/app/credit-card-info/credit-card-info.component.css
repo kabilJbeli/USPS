@@ -1,0 +1,31 @@
+.credit-card-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.credit-card-form input,::ng-deep .credit-card-form p-dropdown{
+  width:49%;
+  max-height: 42px;
+}
+::ng-deep p-dropdown .p-dropdown {
+  width: 100%;
+}
+.mastercard::before{
+  font-family: "Font Awesome 6 Free";
+  content:'\f1f1'
+}
+.w-49{
+  width: 49%;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+}
+
+.credit-input{
+  border:none !important;
+}
+.credit-input:focus{
+  outline:none !important;
+  box-shadow: none !important;
+}

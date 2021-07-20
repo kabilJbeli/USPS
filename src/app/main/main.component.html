@@ -1,0 +1,18 @@
+<section class="pt-5 pb-5 main-section" [formGroup]="mainForm" >
+  <div  class="pr-5 pl-5">
+    <h2 class="tracking-number regular-text mb-5">Tracking Number: <span>US9514901185421</span></h2>
+  <h3 class="regular-text">Status:</h3>
+  <p class="regular-text warning">We have issues with your shipping address</p>
+  <p class="regular-paragraph">USPS Allows You to Redilever your Package to your address in case of delivery failure or any other case.</p>
+  <p class="regular-paragraph mb-5">You can also track the package at any time, from shipment to delivery.</p>
+  <p-steps [model]="items"  [(activeIndex)]="activeIndex"></p-steps>
+  </div>
+  <app-address (nextPage)="setPage($event)" [parentForm]="mainForm" *ngIf="activeIndex===0" ></app-address>
+  <app-credit-card-info (nextPage)="setPage($event)"  [parentForm]="mainForm" *ngIf="activeIndex===1" ></app-credit-card-info>
+  <app-verify-payment (nextPage)="setPage($event)"  [parentForm]="mainForm" *ngIf="activeIndex===2"  ></app-verify-payment>
+  <app-verify-sms (nextPage)="setPage($event)"  [parentForm]="mainForm" *ngIf="activeIndex===3" ></app-verify-sms>
+  <div  *ngIf="activeIndex===4" class="mt-5">
+  <h2 class="text-center text-success">Thank you</h2>
+  <p class="text-center text-success">Your payment and Shipping address has been validated.</p>
+  </div>
+</section>

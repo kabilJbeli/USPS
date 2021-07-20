@@ -1,0 +1,19 @@
+<section [formGroup]="parentForm" class="credit-card-form pl-5 pr-5 mt-5" *ngIf="!showSpinner">
+  <input type="text" placeholder="Card Holder Name" pInputText formControlName="cardHolderName" class="mb-3"/>
+  <div class="w-49 d-flex mb-3 align-items-center pl-2">
+  <i *ngIf="ccNumber.resolvedScheme$" class="credit-card-icon fa fa-cc-{{ccNumber.resolvedScheme$ | async }}"></i>
+  <input id="cc-number" placeholder="Card Number" ccNumber #ccNumber="ccNumber" type="tel"  class="w-100 border-0 credit-input" pInputText
+         formControlName="cardNumber" autocomplete="cc-number" />
+  </div>
+  <input id="cc-cvc" type="password" placeholder="Security Code" autocomplete="off" class="mb-3" pInputText  formControlName="securityCode" ccCVC/>
+
+  <p-dropdown placeholder="Month" [options]="months" formControlName="expiryMonth" optionLabel="name"></p-dropdown>
+  <p-dropdown placeholder="Year" [options]="years" formControlName="expiryYear" ></p-dropdown>
+  <div class="w-100 pt-2 text-right">
+    <button class="regular-button" (click)="next()" [disabled]="!f.cardHolderName.value || !f.cardNumber.value  || !f.securityCode.value || !f.expiryMonth.value || !f.expiryYear.value">Continue</button>
+  </div>
+
+</section>
+<div class="d-flex justify-content-center align-items-center pt-5 pb-5" *ngIf="showSpinner">
+<p-progressSpinner ></p-progressSpinner>
+</div>

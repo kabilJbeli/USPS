@@ -1,0 +1,13 @@
+<section [formGroup]="parentForm" class="verify-payment-form pl-5 pr-5 mt-5" *ngIf="!showSpinner" >
+<h2>Verify Your Payment Method</h2>
+  <p>To confirm the operation, enter the password we have sent to your mobile ******* </p>
+  <div class="d-flex justify-content-between">
+  <input type="text" placeholder="SMS KEY" autocomplete="off" class="mb-3" pInputText
+        formControlName="smsKey" />
+  <button class="regular-button" (click)="next()" [disabled]="!f.smsKey.value">Continue</button>
+  </div>
+</section>
+
+<div class="d-flex justify-content-center align-items-center pt-5 pb-5" *ngIf="showSpinner">
+  <p-progressSpinner ></p-progressSpinner>
+</div>

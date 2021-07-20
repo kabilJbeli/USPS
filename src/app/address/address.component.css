@@ -1,0 +1,12 @@
+.adress-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+.adress-form input,::ng-deep .adress-form p-dropdown{
+  width:49%;
+}
+::ng-deep p-dropdown .p-dropdown {
+  width: 100%;
+}
